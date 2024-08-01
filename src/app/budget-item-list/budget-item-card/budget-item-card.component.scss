@@ -1,0 +1,83 @@
+@import '../../../main-style.scss';
+
+.root {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .x-icon-button {
+    position: absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%) scale(0);
+    opacity: 0;
+    background-color: $dark;
+    background-image: url('../../../../public/close-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      transform: translate(50%, -50%) scale(1.2);
+    }
+  }
+
+  &:hover {
+    .x-icon-button {
+      opacity: 1;
+      transform: translate(50%, -50%) scale(1);
+    }
+  }
+}
+
+.budget-item {
+  display: flex;
+  width: 100%;
+  background-color: $light-grey;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: darken($light-grey, 2%);
+  }
+}
+
+.budget-item__description {
+  display: flex;
+  flex-grow: 1;
+  font-size: 18px;
+  margin-left: 5px;
+  align-items: center;
+}
+
+.budget-item__amount {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.expense {
+  .budget-item__description {
+    color: $red;
+  }
+
+  .budget-item__amount {
+    background-color: $light-red;
+  }
+}
+
+.income {
+  .budget-item__description {
+    color: $green;
+  }
+
+  .budget-item__amount {
+    background-color: $light-green;
+  }
+}

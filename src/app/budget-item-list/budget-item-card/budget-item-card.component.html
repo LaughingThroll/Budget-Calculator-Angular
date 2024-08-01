@@ -1,0 +1,15 @@
+<div class="root">
+  <div [ngClass]="{
+      income: isIncome,
+      expense: !isIncome
+    }" class="budget-item" (click)="onCardClick()">
+    <div class="budget-item__description">
+      <p>{{ this.budgetItem?.description || '' }}</p>
+    </div>
+    <div class="budget-item__amount">
+      <p>{{ this.budgetItem?.amount || 0 }}</p>
+    </div>
+  </div>
+
+  <div class="x-icon-button" (click)="close()"></div>
+</div>

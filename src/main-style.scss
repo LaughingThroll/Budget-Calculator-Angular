@@ -1,0 +1,34 @@
+// defining global styles and changing variables
+
+// Set your brand colors
+$purple: rgb(159, 104, 235);
+$light-grey: #f5f5f5;
+$dark: rgb(22, 28, 41);
+
+$green: #00cc86;
+$light-green: #bafacd;
+
+$red: #dc3900;
+$light-red: #ffe5e3;
+
+// Path to Bulma's sass folder
+@use "bulma/sass" with (
+  $family-primary: '"Nunito", sans-serif',
+  $grey-dark: $dark,
+  $grey-light: $light-grey,
+  $primary: $purple,
+  $link: $purple,
+  $control-border-width: 2px,
+  $input-shadow: none
+);
+
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:300,900");
+
+
+.add-item-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
